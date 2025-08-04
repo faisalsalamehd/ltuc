@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ltuc/api_screen_ui.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: AppBarTheme(backgroundColor: Color(0xffEBB739)),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: Home(),
+      home: ApiScreenUi(),
     );
   }
 }
@@ -40,7 +42,7 @@ class Home extends StatelessWidget {
           onTap: () {},
           child: Container(
             width: MediaQuery.sizeOf(context).width,
-            margin: EdgeInsets.all(16),
+            margin: EdgeInsets.all(8),
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
