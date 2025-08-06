@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ltuc/counter_screen/counter_provider.dart';
+import 'package:ltuc/presentation/screens/counter_screen/counter_provider.dart';
 import 'package:provider/provider.dart';
 
 class CounterScreen extends StatelessWidget {
