@@ -117,25 +117,7 @@ class Home extends StatelessWidget {
   }
 }
 
-//  body: Center(
-//         child: Container(
-//           height: 60,
-//           width: MediaQuery.sizeOf(context).width * 0.85,
-//           decoration: BoxDecoration(
-//             color: Colors.white.withValues(alpha: 0.6),
-//             borderRadius: BorderRadius.circular(12),
-//           ),
-//           child: Row(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             crossAxisAlignment: CrossAxisAlignment.center,
-//             children: [
-//               Icon(Icons.apple,size: 32,color: Colors.white,),
-//               SizedBox(width: 8),
-//               Text('Sign In With Apple', style: TextStyle(color: Colors.white,fontSize: 22)),
-//             ],
-//           ),
-//         ),
-//       ),
+
 
 // body: Center(
 //         child: GestureDetector(
