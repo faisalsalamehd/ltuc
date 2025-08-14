@@ -1,5 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ltuc/helpers/notification_manager.dart';
+import 'package:ltuc/util/constant/general.dart';
 import 'package:ltuc/util/translations/trasnsaltion_key.dart';
 import 'package:ltuc/view/screens/welcome/welcome_controller.dart';
 import 'package:ltuc/view/widgets/primary_button/primary_button.dart';
@@ -15,7 +19,20 @@ class WelcomeScreen extends StatelessWidget {
           body: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Center(
-              child: PrimaryButton(onTap: () {}, title: TransltionKey.signin.tr),
+              child: PrimaryButton(
+                onTap: () async {
+                  log('message');
+                  NotificationManagement.sendNotification(
+                    fcmToken!,
+                    {'type': 'cart'},
+                    {
+                      'title': TransltionKey.signin.tr,
+                      'body': 'Welcome to our app!',
+                    },
+                  );
+                },
+                title: TransltionKey.signin.tr,
+              ),
             ),
           ),
         );

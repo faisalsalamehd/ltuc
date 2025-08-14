@@ -20,12 +20,14 @@ dependencies:
   connectivity_plus: ^6.1.4
   cupertino_icons: ^1.0.8
   
+  firebase_auth: ^6.0.1
   firebase_core: ^4.0.0
   firebase_messaging: ^16.0.0
 
   get_storage: ^2.1.1
   get: ^4.7.2 # state management
   geolocator: ^14.0.2 # for locations use
+  googleapis_auth: ^2.0.0
 
   http: ^1.4.0
 
@@ -53,6 +55,7 @@ flutter:
     - assets/png/
     - assets/jpg/
     - assets/svg/
+    - assets/json/
     
 
   fonts:

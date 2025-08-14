@@ -5,7 +5,7 @@ class AppColors {
   static const Color defaultBlack = Color(0xFF181E22);
 
   static const Color primaryBG = Color.fromRGBO(198, 198, 198, 1.0);
-  static const Color primary = Color(0xFF3B6C64);
+  static Color primary = Color(0xFF3B6C64);
   static const Color secondary = Color(0xffff8900);
   static const Color turquoise = Color(0xff00bec5);
   static const Color otherTurquoise = Color(0x0000bec5);
@@ -13,7 +13,7 @@ class AppColors {
   static const Color otherMagenta = Color(0x00ff0bac);
   static const Color indigo = Color(0xff54086b);
   static const Color black = Color.fromRGBO(0, 0, 0, 1.0);
-  static const Color grey = Color(0xffB4B6BC);  
+  static const Color grey = Color(0xffB4B6BC);
   static const Color darkGrey = Color(0xff303437);
   static const Color blackIcons = Color.fromRGBO(5, 5, 5, 1.0);
   static const Color greyIcons = Color.fromARGB(255, 237, 237, 242);

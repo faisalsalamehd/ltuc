@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "549512918854",
+    "project_id": "ltuc-e894e",
+    "storage_bucket": "ltuc-e894e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549512918854:android:f10307534ed1f8eaf45747",
+        "android_client_info": {
+          "package_name": "com.tuned.ltuc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO0AFVWoaZO9Y3cay0SSlplCoZ9onXJbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
