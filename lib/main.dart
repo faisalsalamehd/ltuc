@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ltuc/api_screen_ui.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,14 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      home: ApiScreenUi(),
-    );
+    return const MaterialApp(home: Home());
   }
 }
 
@@ -27,137 +19,212 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios_new, color: Colors.white),
-        title: Text('Aya', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.white,
+        title: Text('Welcome to Flutter'),
         centerTitle: true,
+        leading: Container(
+          margin: EdgeInsetsDirectional.only(start: 4),
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(Icons.menu, color: Colors.white),
+        ),
         actions: [
-          Icon(Icons.notifications, color: Colors.white),
-          Icon(Icons.shop_2, color: Colors.white),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.notifications_outlined,
+              color: Colors.amber,
+              size: 30,
+            ),
+          ),
         ],
       ),
-      body: Center(
-        child: GestureDetector(
-          onTap: () {},
-          child: Container(
-            width: MediaQuery.sizeOf(context).width,
-            margin: EdgeInsets.all(8),
-            padding: EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 55,
+              width: MediaQuery.sizeOf(context).width,
+              decoration: BoxDecoration(
+                color: Color(0xff3B6C64),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Center(
+                child: Text(
+                  'Search',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
+              ),
             ),
-            child: Row(
+            SizedBox(height: 16),
+            Container(
+              height: 55,
+              width: MediaQuery.sizeOf(context).width,
+              decoration: BoxDecoration(
+                color: Color(0xffEEEEEE),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.apple, color: Colors.black),
+                  SizedBox(width: 8),
+                  Text('Sign In With Apple', style: TextStyle(fontSize: 20)),
+                ],
+              ),
+            ),
+            SizedBox(height: 16),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset('assets/png/red car.png', width: 170),
-                SizedBox(width: 16),
+                Container(width: 100, height: 100, color: Colors.red),
+                SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text('Ferrari 458 Italia', style: TextStyle(fontSize: 24)),
+                    Text('any Data', style: TextStyle(color: Colors.black)),
+                    Text('any Data', style: TextStyle(color: Colors.black)),
                     Row(
                       children: [
-                        Icon(Icons.location_pin),
-                        SizedBox(width: 8),
-                        Text('New york'),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.star, color: Colors.amber),
-                        SizedBox(width: 4),
-                        Text('4.9'),
+                        Text('\$100', style: TextStyle(color: Colors.black)),
                         SizedBox(width: 4),
                         Text(
-                          '(129 reviews)',
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8),
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.amber,
-                            borderRadius: BorderRadius.circular(25),
+                          '\$120',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            decoration: TextDecoration.lineThrough,
+                            decorationColor: Colors.grey,
                           ),
-                          child: Row(
-                            children: [
-                              Text('\$2000'),
-                              SizedBox(width: 4),
-                              Text(
-                                'days',
-                                style: TextStyle(color: Colors.grey),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 8),
-                        CircleAvatar(
-                          backgroundImage: AssetImage('assets/png/red car.png'),
-                        ),
-                        SizedBox(width: 8),
-                        CircleAvatar(
-                          child: Icon(Icons.favorite, color: Colors.red),
                         ),
                       ],
                     ),
                   ],
                 ),
+                Spacer(),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(onPressed: () {}, icon: Icon(Icons.minimize)),
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.lightGreenAccent,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text('1', style: TextStyle(color: Colors.black)),
+                      ),
+                      IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                    ],
+                  ),
+                ),
               ],
             ),
-          ),
+          ],
         ),
       ),
     );
   }
 }
 
-//  body: Center(
-//         child: Container(
-// kbhkjfggdffdgdfgddddddddddddddddddddd
+// body: const Center(
+      //   child: Text(
+      //     'Hello, World!',
+      //     style: TextStyle(
+      //       color: Color.fromARGB(255, 73, 255, 66),
+      //       fontSize: 50,
+      //       // fontFamily: 'Comic Sans MS'
+      //       fontWeight: FontWeight.w900,
+      //       overflow: TextOverflow.ellipsis, 
+      //     ),
+      //     maxLines: 2,
+      //     textAlign: TextAlign.justify,
+      //   ),
+      // ),
 
-//           width: MediaQuery.sizeOf(context).width * 0.85,
-//           decoration: BoxDecoration(
-//             color: Colors.white.withValues(alpha: 0.6),
-//             borderRadius: BorderRadius.circular(12),
-//           ),
-//           child: Row(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             crossAxisAlignment: CrossAxisAlignment.center,
-//             children: [
-//               Icon(Icons.apple,size: 32,color: Colors.white,),
-//               SizedBox(width: 8),
-//               Text('Sign In With Apple', style: TextStyle(color: Colors.white,fontSize: 22)),
-//             ],
-//           ),
-//         ),
-//       ),
 
-// body: Center(
-//         child: GestureDetector(
-//           onTap: () {
-//             print('Hammad');
-//           },
-//           child: Container(
-//             margin: EdgeInsets.all(16),
-//             // padding: EdgeInsets.all(4),
-//             width: MediaQuery.sizeOf(context).width,
-//             height: 60,
-//             decoration: BoxDecoration(
-//               color: Color(0xffEBB739),
-//               borderRadius: BorderRadius.circular(10),
-//             ),
-//             child: Center(
-//               child: Text(
-//                 'Haninni',
-//                 style: TextStyle(color: Colors.black, fontSize: 20),
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
+
+
+      // body: Center(
+      //   child: Container(
+      //     // alignment: Alignment.center,
+      //     // color: Colors.grey.withValues(alpha: 0.5),
+      //     height: 60,
+      //     width: MediaQuery.sizeOf(context).width,
+      //     margin: EdgeInsets.all(16),
+      //     // padding: EdgeInsets.all(16),
+      //     decoration: BoxDecoration(
+      //       // color: Colors.amber,
+      //       borderRadius: BorderRadius.circular(16),
+      //       // border: Border.all(color: Colors.black, width: 2),
+      //       gradient: LinearGradient(
+      //         colors: [Colors.pink, Colors.purple],
+      //         begin: Alignment.center,
+      //         end: Alignment.centerRight,
+      //         // stops: [0.1,0.9],
+      //       ),
+      //       boxShadow: [
+      //         BoxShadow(
+      //           color: Colors.grey.withValues(alpha: 0.5),
+      //           spreadRadius: 10,
+      //           blurRadius: 15,
+      //           offset: Offset(12, 7),
+      //           blurStyle: BlurStyle.normal,
+      //         ),
+      //       ],
+      //       image: DecorationImage(
+      //         image: AssetImage('assets/images/1.jpg'),
+      //         fit: BoxFit.cover,
+      //       ),
+      //     ),
+      //     child: Center(
+      //       child: Text(
+      //         'Submit',
+      //         style: TextStyle(color: Colors.white, fontSize: 24),
+      //       ),
+      //     ),
+      //   ),
+      // ),
+
+
+        // body: Container(
+      //   color: Colors.amber,
+      //   width: MediaQuery.sizeOf(context).width,
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.start,
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     mainAxisSize: MainAxisSize.max,
+      //     children: [
+      //       Text('Welcome to Flutter'),
+      //       Text('Welcome to Flutter'),
+      //       Text('Welcome to Flutter'),
+      //       Text('Welcome to Flutter'),
+      //       Text('Welcome to Flutter'),
+      //       Text('Welcome to Flutter'),
+      //       Container(
+      //         color: Colors.red,
+      //         height: 90,
+      //         child: Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //           crossAxisAlignment: CrossAxisAlignment.start,
+      //           children: [
+      //             Text('Welcome to Flutter'),
+      //             Text('Welcome to Flutter'),
+      //           ],
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+    
