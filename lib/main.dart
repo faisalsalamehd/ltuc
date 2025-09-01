@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: getPages,
-      locale: Locale('ar'),
+      locale: Locale('en'),
       translations: AppTranslations(),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
