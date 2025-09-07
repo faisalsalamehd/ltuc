@@ -1,8 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ltuc/model/shein_model.dart';
+import 'package:ltuc/view/screens/welcome/welcome_repo.dart';
 
 class WelcomeController extends GetxController {
+  SheInModel sheInModel = SheInModel();
+
+  void getSheIn() async {
+    sheInModel = await WelcomeRepo.fetchData();
+  }
+
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -43,5 +51,4 @@ class WelcomeController extends GetxController {
       print(e.toString());
     }
   }
-
 }
