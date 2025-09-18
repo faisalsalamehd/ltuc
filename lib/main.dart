@@ -58,8 +58,6 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         routes: routes,
-
-        // home: HomeScreen(),
       ),
     );
   }
